@@ -11,6 +11,7 @@ import {
   catagoryList,
   filteredProducts,
   productListData,
+  cartItemsData,
 } from "../state/state";
 
 const ProductList = () => {
@@ -19,6 +20,8 @@ const ProductList = () => {
   const [categoryList, setCategoryList] = useAtom(catagoryList);
 
   const [selectedCategory, setSelectedCategory] = useState(null);
+
+  const [cartItems, setCartItems] = useAtom(cartItemsData);
 
   const history = useHistory();
 
@@ -191,7 +194,7 @@ const ProductList = () => {
     setCategoryList(mockCategories);
     setProductList(mockProductData);
     setProducts(mockProductData);
-  }, []);
+  }, [cartItems]);
 
   const header = (imagePath) => {
     return (
