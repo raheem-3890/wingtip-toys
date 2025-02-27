@@ -197,7 +197,7 @@ const ProductList = () => {
     return (
       <img
         alt="product-image"
-        src={`./assets/Catalog/Images/Thumbs/${imagePath}`}
+        src={`./assets/catalog/images/thumbs/${imagePath}`}
         width="100%"
       />
     );
